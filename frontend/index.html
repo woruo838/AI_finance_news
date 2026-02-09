@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>每日金融新闻摘要</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="badge">AI Finance News</p>
+        <h1>每日金融新闻摘要</h1>
+        <p class="subtitle">自动抓取全球金融新闻并生成摘要，帮助你快速把握市场动态。</p>
+      </div>
+      <button id="refresh" class="primary">刷新今日摘要</button>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>今日亮点</h2>
+        <p id="highlights" class="muted">加载中...</p>
+      </section>
+
+      <section>
+        <div class="section-header">
+          <h2>最新新闻</h2>
+          <div class="controls">
+            <label for="limit">数量</label>
+            <select id="limit">
+              <option value="6">6</option>
+              <option value="10" selected>10</option>
+              <option value="20">20</option>
+            </select>
+          </div>
+        </div>
+        <div id="news" class="news-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>数据来源：Yahoo Finance、WSJ Markets 等公开 RSS。</p>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
